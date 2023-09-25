@@ -1,3 +1,24 @@
-<form #mobile >
+<form #product="ngForm" (ngSubmit)="addProductDetials()" >
+  <div class="form-group">
+    <label for="prductName">Product Name:</label>
+    <input type="text" id="prductName" name="prductName" [(ngModel)]="productData.prductName" required>
+  </div>
+  <div class="form-group">
+    <label for="prductPrice">Product Price:</label>
+    <input type="text" id="prductPrice" name="prductPrice" [(ngModel)]="productData.prductPrice" required>
+  </div>
+  <div class="form-group">
+    <label for="productDescription">Product Description:</label>
+    <input type="text" id="productDescription" name="productDescription" [(ngModel)]="productData.productDescription" required>
+  </div>
+  <div class="form-group">
+    <label for="productEnterDate">Product Entery Date:</label>
+    <input type="date" id="productEnterDate" name="productEnterDate" [(ngModel)]="productData.productEnterDate" required>
+  </div>
+  <div class="form-group">
+    <label for="productExpireDate">Product Expire Date:</label>
+    <input type="date" id="productExpireDate" name="productExpireDate" [(ngModel)]="productData.productExpireDate" required>
+  </div>
+  <button type="submit">Submit</button>
 
 </form>
